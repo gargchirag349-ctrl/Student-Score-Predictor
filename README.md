@@ -1,39 +1,25 @@
-# Student-Score-Predictor
-ML project to predict student exam scores
-# Student Score Predictor 🎓
+# Student Score Predictor
 
-## About the Project
-Student Score Predictor is a Machine Learning project developed as part of my AI Applications course assessment.
+A simple Gradio web application for the Student Score Predictor project.
 
-The project predicts students' exam scores using academic and personal factors.
+## Files
+- `app.py` — trains Linear Regression and Decision Tree Regressor, evaluates them, and provides a prediction interface.
+- `StudentPerformanceFactors.csv` — dataset used by the application.
+- `requirements.txt` — Python libraries required to run the application.
 
-## Input Features
-- Hours Studied
-- Attendance
-- Previous Scores
-- Sleep Hours
-- Parental Education
-- Family Income
-- School Type
+## Run locally
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
-## Technologies Used
-- Python
-- Google Colab
-- Pandas
-- NumPy
-- Scikit-learn
-- Gradio
+## Deploy on Render (Free Web Service)
+1. Upload all three files to the **root** of your GitHub repository.
+2. In Render, connect the repository and select **Python 3**.
+3. Leave Root Directory blank.
+4. Build Command: `pip install -r requirements.txt`
+5. Start Command: `python app.py`
+6. Select the Free instance.
+7. Click Deploy.
 
-## Machine Learning Algorithms
-- Linear Regression
-- Decision Tree Regressor
-
-## Evaluation Metrics
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
-
-## Project Interface
-An interactive interface was developed using Gradio to enter student details and predict exam scores.
-
-## Learning Outcome
-This project helped me understand data preprocessing, regression models, model evaluation and practical applications of Machine Learning.
+The application uses Render's `PORT` environment variable automatically.
